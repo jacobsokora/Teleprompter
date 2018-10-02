@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Teleprompter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TeleprompterViewController" customModule="Teleprompter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgm-lW-NLN">
+                                <rect key="frame" x="31" y="20" width="313" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdP-Jy-olm">
+                                <rect key="frame" x="0.0" y="356.5" width="375" height="266.5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gw-D8-Q36">
+                                <rect key="frame" x="0.0" y="20" width="375" height="266.5"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pvI-Ru-rl0">
+                                <rect key="frame" x="16" y="20" width="15" height="603"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="x9N-JB-oPU"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Bpp-FM-OMm" appends="YES" id="DIa-4w-ctQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFW-uT-Ez0">
+                                <rect key="frame" x="344" y="20" width="15" height="603"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="P6X-16-DIE"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WGm-YR-Y1e" appends="YES" id="AN4-EX-urJ"/>
+                                </connections>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLN-QZ-plb">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="play" id="pW9-3o-tTL">
+                                        <connections>
+                                            <action selector="playText:" destination="BYZ-38-t0r" id="LCX-Wn-eXn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="pause" id="7aO-ak-76P">
+                                        <connections>
+                                            <action selector="pauseText:" destination="BYZ-38-t0r" id="J4P-oM-bl9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="rewind" id="QvP-px-Q7L">
+                                        <connections>
+                                            <action selector="rewindText:" destination="BYZ-38-t0r" id="9zd-nV-OTd"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="3Lu-C4-XTb"/>
+                                    <barButtonItem systemItem="refresh" id="gxD-O2-Xnf">
+                                        <connections>
+                                            <action selector="flipText:" destination="BYZ-38-t0r" id="a4e-zj-F1q"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PLN-QZ-plb" secondAttribute="bottom" id="A4i-zU-He0"/>
+                            <constraint firstItem="4gw-D8-Q36" firstAttribute="height" secondItem="VdP-Jy-olm" secondAttribute="height" id="BxX-dV-ELZ"/>
+                            <constraint firstItem="4gw-D8-Q36" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DOo-B5-Gjg"/>
+                            <constraint firstItem="Hgm-lW-NLN" firstAttribute="leading" secondItem="pvI-Ru-rl0" secondAttribute="trailing" id="HEe-Bz-4tj"/>
+                            <constraint firstItem="VdP-Jy-olm" firstAttribute="top" secondItem="4gw-D8-Q36" secondAttribute="bottom" constant="70" id="I3g-qP-5bP"/>
+                            <constraint firstItem="VdP-Jy-olm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K1B-U4-ehZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdP-Jy-olm" secondAttribute="trailing" id="Lr4-Xl-UEV"/>
+                            <constraint firstItem="pvI-Ru-rl0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="N3b-d7-VOH"/>
+                            <constraint firstItem="PLN-QZ-plb" firstAttribute="top" secondItem="VdP-Jy-olm" secondAttribute="bottom" id="Oda-c7-dMd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4gw-D8-Q36" secondAttribute="trailing" id="Upi-f0-1Qo"/>
+                            <constraint firstItem="pvI-Ru-rl0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VEc-4e-0a6"/>
+                            <constraint firstItem="TFW-uT-Ez0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aL8-rw-E6c"/>
+                            <constraint firstItem="Hgm-lW-NLN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dIh-I9-dOW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PLN-QZ-plb" secondAttribute="trailing" id="dNK-jh-3E5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TFW-uT-Ez0" secondAttribute="trailing" constant="16" id="gm8-JT-Fd3"/>
+                            <constraint firstItem="PLN-QZ-plb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hW4-Ss-gwm"/>
+                            <constraint firstItem="PLN-QZ-plb" firstAttribute="top" secondItem="pvI-Ru-rl0" secondAttribute="bottom" id="l0L-mP-aV1"/>
+                            <constraint firstItem="TFW-uT-Ez0" firstAttribute="leading" secondItem="Hgm-lW-NLN" secondAttribute="trailing" id="mGt-bP-v6l"/>
+                            <constraint firstItem="PLN-QZ-plb" firstAttribute="top" secondItem="Hgm-lW-NLN" secondAttribute="bottom" id="nmr-C1-RFW"/>
+                            <constraint firstItem="4gw-D8-Q36" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ono-x0-MU0"/>
+                            <constraint firstItem="PLN-QZ-plb" firstAttribute="top" secondItem="TFW-uT-Ez0" secondAttribute="bottom" id="uzJ-bm-akG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftBarConstraint" destination="VEc-4e-0a6" id="NFs-ia-rpg"/>
+                        <outlet property="rightBarConstraint" destination="gm8-JT-Fd3" id="F8i-Tl-KsC"/>
+                        <outlet property="teleprompterTextView" destination="Hgm-lW-NLN" id="5Qr-Gp-ctK"/>
+                        <outlet property="topOverlayView" destination="4gw-D8-Q36" id="bYb-8Y-Avd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Bpp-FM-OMm">
+                    <connections>
+                        <action selector="leftBarDragged:" destination="BYZ-38-t0r" id="aMZ-kI-muY"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="WGm-YR-Y1e">
+                    <connections>
+                        <action selector="rightBarDragged:" destination="BYZ-38-t0r" id="7gD-pw-VgC"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
